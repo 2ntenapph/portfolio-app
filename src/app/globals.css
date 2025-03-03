@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme (Gruvbox Light Medium) */
+  --background: #fbf1c7;
+  --foreground: #3c3836;
+  --foreground-light: #d5c4a1;
+  --primary: #d65d0e;
+  --secondary: #b16286;
+  --highlight: #458588;
+}
+
+.dark {
+  /* Dark Theme (Gruvbox Dark Medium) */
+  --background: #282828;
+  --foreground: #ebdbb2;
+  --foreground-light: #3c3836;
+  --primary: #fe8019;
+  --secondary: #d3869b;
+  --highlight: #83a598;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+

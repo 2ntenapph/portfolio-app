@@ -1,0 +1,186 @@
+export const profiles = [
+  {
+    slug: "anton-filippov",
+    name: "Anton Filippov",
+    title: "Backend Developer | Full-Stack Specialist | Team Lead",
+    location: "Toronto, ON, Canada",
+    description:
+      "I have a strong background in software development with a focus on backend systems, microservices, and cloud infrastructure. I studied Computer Science at MIREA - Russian Technological University and continued my education in Software Development at Mohawk College in Canada.\n\nWith over six years of experience, I have worked on high-performance applications, API integrations, and scalable architectures. At ForaPay, I led backend development for a financial product, integrating AI and improving user engagement. At Pilgrim Accounting, I developed a MERN-based system that doubled business efficiency. My expertise spans JavaScript, TypeScript, Python, Java, and various DevOps tools, allowing me to build secure, optimized, and scalable solutions.",
+    contact: {
+      email: "anton.filippov.ca@gmail.com",
+      telegram: "https://t.me/anttenn",
+      linkedin: "https://www.linkedin.com/in/anton-filippov-2a640022b",
+      github: "https://github.com/2ntenapph",
+    },
+    skills: {
+      "Programming Languages": [
+        { name: "JavaScript", icon: "javascript.svg" },
+        { name: "TypeScript", icon: "typescript.svg" },
+        { name: "Java", icon: "java.svg" },
+        { name: "C++", icon: "cpp.svg" },
+        { name: "C#", icon: "csharp.svg" },
+        { name: "Python", icon: "python.svg" },
+        { name: "PHP", icon: "php.svg" },
+      ],
+      "🚀 Web & Software Development": {
+        "Frontend Development": [
+          { name: "React", icon: "react.svg" },
+          { name: "Next.js", icon: "nextjs.svg" },
+          { name: "Vue.js", icon: "vue.svg" },
+          { name: "Tailwind CSS", icon: "tailwindcss.svg" },
+          { name: "MUI (Material-UI)", icon: "mui.svg" },
+          { name: "Bootstrap", icon: "bootstrap.svg" },
+          { name: "Flutter", icon: "flutter.svg" },
+        ],
+        "Backend Development": [
+          { name: "Node.js", icon: "nodejs.svg" },
+          { name: "Spring", icon: "spring.svg" },
+          { name: "Express.js", icon: "express.svg" },
+        ],
+        "Full-Stack Development": [
+          {
+            name: "MERN (MongoDB, Express, React, Node.js)",
+            icon: "react.svg",
+          },
+          { name: "MEVN (MongoDB, Express, Vue.js, Node.js)", icon: "vue.svg" },
+        ],
+        "State Management": [
+          { name: "Redux", icon: "redux.svg" },
+          { name: "Redux Toolkit", icon: "reduxtoolkit.svg" },
+        ],
+        "API & Web Technologies": [
+          { name: "REST API", icon: "restapi.svg" },
+          { name: "Webhooks", icon: "webhooks.svg" },
+          { name: "Websockets", icon: "websocket.svg" },
+        ],
+      },
+      "🛠️ DevOps & CI/CD": [
+        { name: "Docker", icon: "docker.svg" },
+        { name: "Jenkins", icon: "jenkins.svg" },
+        { name: "Git", icon: "git.svg" },
+      ],
+      "🗄️ Databases & Storage": [
+        { name: "PostgreSQL", icon: "PostgreSQL.svg" },
+        { name: "MSSQL", icon: "mssql.svg" },
+        { name: "MySQL", icon: "mysql.svg" },
+        { name: "MongoDB", icon: "mongodb.svg" },
+      ],
+      "🛍️ CMS & E-Commerce": [
+        { name: "WordPress", icon: "wordpress.svg" },
+        { name: "Shopify", icon: "shopify.svg" },
+        { name: "Wix", icon: "wix.svg" },
+        { name: "Tilda", icon: "tilda.svg" },
+      ],
+      "🎨 UI/UX & Design": [
+        { name: "Figma", icon: "figma.svg" },
+        { name: "Adobe Illustrator", icon: "llustrator.svg" },
+      ],
+      "📊 Business & Strategy": [
+        { name: "Market research", icon: "chess.svg" },
+        { name: "Strategy planning", icon: "chess.svg" },
+        { name: "Technical architecture design", icon: "architecture.svg" },
+        { name: "Pitch deck creation", icon: "presentation.svg" },
+        { name: "Event representation & networking", icon: "conduct.svg" },
+      ],
+      "🤝 Soft Skills": [
+        { name: "Teamwork & leadership", icon: "team.svg" },
+        {
+          name: "Effective communication & adaptability",
+          icon: "communication.svg",
+        },
+        { name: "Problem-solving & time management", icon: "chess.svg" },
+        { name: "Project management", icon: "conduct.svg" },
+      ],
+    },
+    experience: [
+      {
+        company: "ForaPay",
+        location: "Toronto",
+        role: "Senior Backend Engineer",
+        period: "2023 – Present (1.5 years)",
+        description:
+          "Led the development of a microservices-based financial platform, designing backend architecture, API infrastructure, and deployment pipelines. The platform is now live with 99.99% uptime.",
+        achievements: [
+          "Enhanced system uptime from 84.2% to 91.6% by implementing monitoring dashboards and incident response automation.",
+          "Designed and built a scalable API layer, reducing integration time by 23.4%.",
+          "Developed event-driven services for real-time transaction processing, reducing operational delays.",
+          "Implemented AI-powered financial education features, reducing customer support requests by 18.7%.",
+        ],
+      },
+      {
+        company: "Together Made Simple",
+        location: "",
+        role: "Full-Stack Engineer",
+        period: "2024 (6 months)",
+        description:
+          "Developed a client booking and payment platform, increasing conversion rates by 25.4%.",
+        achievements: [
+          "Integrated a CRM system to automate client scheduling, cutting manual workload by 30%.",
+          "Implemented a PCI-DSS compliant payment gateway, increasing successful transactions by 30%.",
+          "Built WebSocket-based real-time notifications, improving customer engagement.",
+          "Redesigned the booking and payment process, boosting sales by 20% and reducing cancellations by 35%.",
+        ],
+      },
+      {
+        company: "Misolla",
+        location: "",
+        role: "Software Engineer",
+        period: "2022 – 2023 (1 year)",
+        description:
+          "Developed a CRM dashboard with React & Node.js, increasing business throughput and streamlining client management.",
+        achievements: [
+          "Optimized MongoDB indexing and queries, cutting database response time by 7.8%.",
+          "Designed RESTful APIs for real-time data updates and seamless cross-service synchronization.",
+          "Implemented SEO strategies, increasing website traffic by 25.3% and boosting new client acquisition.",
+        ],
+      },
+      {
+        company: "Pilgrim Accounting",
+        location: "",
+        role: "Backend Engineer",
+        period: "2021 – 2022 (1 year)",
+        description:
+          "Optimized backend queries and caching, reducing page load times by 10% and improving system responsiveness.",
+        achievements: [
+          "Implemented a robust spam detection system, decreasing unsolicited emails by 60%.",
+          "Integrated API security best practices, ensuring secure transactions and protection against unauthorized access.",
+        ],
+      },
+    ],
+    projects: [
+      {
+        name: "ForaPay Financial API",
+        description:
+          "Secure API for financial transactions with AI-powered insights.",
+        techStack: ["Java", "Spring Boot", "Azure", "PostgreSQL", "Jenkins"],
+        url: "https://forapay.io",
+      },
+      {
+        name: "Client Management System",
+        description: "Web app for client management with real-time support.",
+        techStack: ["MongoDB", "Express.js", "React", "Node.js"],
+        url: "https://piligrim-accounting.com",
+      },
+    ],
+    //MIREA - Technological University, Moscow — Bachelor, 2020-2021
+    // Computer Engineering
+    // Mohawk College, Hamilton — Bachelor, 2021-2025
+    // Software Development
+    education: [
+      {
+        icon: "mirea.svg", // Filename of the university logo
+        name: "MIREA",
+        degree: "Bachelor",
+        field: "Computer Engineering",
+        years: "2020-2021"
+      },
+      {
+        icon: "mohawk.svg", // Filename of the university logo
+        name: "Mohawk College",
+        degree: "Bachelor",
+        field: "Software Development",
+        years: "2021-2025"
+      }
+    ],
+  },
+];
