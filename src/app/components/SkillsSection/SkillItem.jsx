@@ -18,7 +18,7 @@ function SkillItem({ skill }) {
         "
       >
         <Image
-          src={`/icons/tools/${skill.icon}`}
+          src={`./icons/tools/${skill.icon}`}
           alt={skill.name}
           width={12}
           height={12}

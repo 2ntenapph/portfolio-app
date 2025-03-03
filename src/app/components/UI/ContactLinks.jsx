@@ -17,7 +17,7 @@ export default function ContactLinks({ contact }) {
           rel="noopener noreferrer"
         >
           <Image
-            src={`/icons/${key}.svg`}
+            src={`./icons/${key}.svg`}
             alt={key}
             width={36}
             height={36}

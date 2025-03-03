@@ -5,7 +5,7 @@ export default function GetResume({ resume }) {
   return (
     <div className="flex justify-center">
       <a
-        href={`/files/resumes/${resume.resumeUrl}`}
+        href={`./files/resumes/${resume.resumeUrl}`}
         download="resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
