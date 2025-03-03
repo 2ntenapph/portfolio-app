@@ -7,6 +7,7 @@ import ContactLinks from "./UI/ContactLinks";
 import ExperienceSection from "./ExperienceSection/ExperienceSection";
 import ProjectsSection from "./ProjectsSection/ProjectsSection";
 import EducationList from "./EducationSection/EducationList";
+import GetResume from "./GetResume";
 
 export default function ProfileClient({ profile }) {
   const [theme, setTheme] = useState("dark");
@@ -44,6 +45,10 @@ export default function ProfileClient({ profile }) {
 
         <section className="max-w-4xl w-full mb-12">
           <ProjectsSection projects={profile.projects} />
+        </section>
+
+        <section className="flex justify-center">
+            <GetResume resume={profile.resume} />
         </section>
       </main>
     </div>

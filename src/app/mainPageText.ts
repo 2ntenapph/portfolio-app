@@ -162,25 +162,24 @@ export const profiles = [
         url: "https://piligrim-accounting.com",
       },
     ],
-    //MIREA - Technological University, Moscow — Bachelor, 2020-2021
-    // Computer Engineering
-    // Mohawk College, Hamilton — Bachelor, 2021-2025
-    // Software Development
     education: [
       {
-        icon: "mirea.svg", // Filename of the university logo
+        icon: "mirea.svg",
         name: "MIREA",
         degree: "Bachelor",
         field: "Computer Engineering",
         years: "2020-2021"
       },
       {
-        icon: "mohawk.svg", // Filename of the university logo
+        icon: "mohawk.svg",
         name: "Mohawk College",
         degree: "Bachelor",
         field: "Software Development",
         years: "2021-2025"
       }
     ],
+    resume: {
+      resumeUrl: "AnotnFilippovCV.pdf",
+    },
   },
 ];
