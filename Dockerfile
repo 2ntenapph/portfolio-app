@@ -33,5 +33,5 @@ COPY --from=builder /app/node_modules ./node_modules
 # Expose the port for Railway
 EXPOSE 3000
 
-# Run the standalone server
-CMD ["node", ".next/standalone/server.js"]
+# Run the Next.js standalone server (CORRECT COMMAND)
+CMD ["node", "server.js"]
