@@ -17,7 +17,8 @@ COPY . .
 RUN npm run build
 
 # Expose the correct port
+ENV PORT=3000
 EXPOSE 3000
 
-# Start the Next.js server in production mode
+# Start Next.js standalone server
 CMD ["node", ".next/standalone/server.js"]
