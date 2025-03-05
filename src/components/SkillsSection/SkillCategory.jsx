@@ -1,21 +1,21 @@
 import SkillsList from "./SkillsList";
 
 function SkillCategory({ category, skills }) {
-  // Simple transformation for display
+  if (!skills) return null; // Prevent rendering errors if skills are undefined
+
+  // Properly format category names for display
   const displayName = category.replace(/([A-Z])/g, " $1").trim();
 
-  // If `skills` is another nested object with subcategories, handle that
+  // If `skills` is a nested object with subcategories, handle that
   if (typeof skills === "object" && !Array.isArray(skills)) {
     return (
-      <div className="p-1 ">
+      <div className="p-1">
         <h3 className="text-md font-semibold text-[var(--foreground)] mb-1 uppercase tracking-wide">
           {displayName}
         </h3>
         {Object.entries(skills).map(([subCategory, subSkills]) => (
           <div key={subCategory} className="pl-4">
-            <h4 className="text-sm font-medium text-gray-400">
-              {subCategory}
-            </h4>
+            <h4 className="text-sm font-medium text-gray-400">{subCategory}</h4>
             <SkillsList skills={subSkills} />
           </div>
         ))}
@@ -23,9 +23,9 @@ function SkillCategory({ category, skills }) {
     );
   }
 
-  // Otherwise, it's just a plain array of skills
+  // Otherwise, it's a standard list of skills
   return (
-    <div className="p-1 ">
+    <div className="p-1">
       <h3 className="text-md font-semibold text-[var(--foreground)] mb-1 uppercase tracking-wide">
         {displayName}
       </h3>

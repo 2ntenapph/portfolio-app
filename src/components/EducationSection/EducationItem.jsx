@@ -19,7 +19,7 @@ function EducationItem({ institute }) {
       >
         <div className="inline-flex items-start gap-2 w-fit h-fit">
           <Image
-            src={`./icons/${institute.icon}`}
+            src={`/icons/${institute.icon}`}
             alt={institute.name}
             width={12}
             height={12}

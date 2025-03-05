@@ -21,7 +21,7 @@ export default function SkillsSection({ skills }) {
       // Reset inner scroll to top
       if (scrollableRef.current) {
         scrollableRef.current.scrollTop = 0;
-      }      
+      }
       // Then scroll entire section into view
       sectionRef.current?.scrollIntoView({ behavior: "smooth" });
     }
@@ -51,11 +51,11 @@ export default function SkillsSection({ skills }) {
             ${expanded ? "max-h-[9999px]" : "max-h-96"}
           `}
           >
-            {Object.entries(skills).map(([category, skillValue]) => (
+            {skills.map((skillsGroup) => (
               <SkillCategory
-                key={category}
-                category={category}
-                skills={skillValue}
+                key={skillsGroup.title}
+                category={skillsGroup.title}
+                skills={skillsGroup.list}
               />
             ))}
           </div>
