@@ -17,6 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the correct port
+ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
 EXPOSE 3000
 
