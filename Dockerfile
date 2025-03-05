@@ -1,14 +1,14 @@
 # Use Node.js official image
-FROM node:18
+FROM node:18-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy package.json and package-lock.json first (for better caching)
 COPY package.json package-lock.json ./
 
-# Install dependencies correctly
-RUN npm ci --production
+# Install dependencies
+RUN npm install --production
 
 # Copy the rest of the app
 COPY . .
@@ -16,10 +16,8 @@ COPY . .
 # Build the Next.js app
 RUN npm run build
 
-# Expose the correct port
-ENV HOSTNAME=0.0.0.0
-ENV PORT=3000
+# Expose the port
 EXPOSE 3000
 
-# Start Next.js standalone server
-CMD ["node", ".next/standalone/server.js"]
+# Start the Next.js server
+CMD ["npm", "run", "start"]

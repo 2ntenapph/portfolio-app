@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function ContactLinks({ contact }) {
@@ -10,7 +11,7 @@ export default function ContactLinks({ contact }) {
   return (
     <div className="flex space-x-4">
       {Object.entries(contact).map(([key, url]) => (
-        <a 
+        <Link
           key={key} 
           href={url} 
           target="_blank" 
@@ -23,7 +24,7 @@ export default function ContactLinks({ contact }) {
             height={36}
             className="transition duration-300 transform hover:scale-125 hover:brightness-125"
           />
-        </a>
+        </Link>
       ))}
     </div>
   );

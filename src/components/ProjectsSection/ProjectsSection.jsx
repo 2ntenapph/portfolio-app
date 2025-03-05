@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function ProjectsSection({ projects }) {
@@ -16,14 +17,14 @@ export default function ProjectsSection({ projects }) {
             key={index}
             className="p-6 bg-[var(--background-soft)] shadow-lg rounded-lg border border-gray-600/40"
           >
-            <a
+            <Link
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg font-semibold text-[var(--highlight)] hover:underline"
             >
               {project.name}
-            </a>
+            </Link>
             <p className="mt-2 text-sm">{project.description}</p>
             {project.techStack && (
               <p className="text-xs text-gray-400 mt-1">

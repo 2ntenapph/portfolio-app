@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NotFoundPage() {
     return (
       <div className="flex flex-col items-center justify-center w-full min-h-screen">
@@ -8,9 +10,9 @@ export default function NotFoundPage() {
           </p>
           
           {/* Go Home Link */}
-          <a href="/" className="block w-full text-center px-4 py-2 text-white bg-[var(--primary)] rounded-md transition duration-300 hover:bg-[var(--highlight)]">
+          <Link href="/" className="block w-full text-center px-4 py-2 text-white bg-[var(--primary)] rounded-md transition duration-300 hover:bg-[var(--highlight)]">
             Go Back Home
-          </a>
+          </Link>
         </div>
       </div>
     );

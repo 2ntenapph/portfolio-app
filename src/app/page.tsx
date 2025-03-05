@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function LoginPage() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
@@ -81,7 +82,7 @@ export default function LoginPage() {
 
         {/* Signup or Forgot Password */}
         <p className="text-center text-[var(--foreground)]">
-          Don't have an account? <a href="/signup" className="text-[var(--highlight)] hover:underline">Sign Up</a>
+          Don't have an account? <Link href="/signup" className="text-[var(--highlight)] hover:underline">Sign Up</Link>
         </p>
       </div>
     </div>

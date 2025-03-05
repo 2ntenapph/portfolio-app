@@ -1,5 +1,6 @@
 "use client"; // If using App Router
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function RegisterPage() {
@@ -175,7 +176,7 @@ export default function RegisterPage() {
 
         {/* Already have an account */}
         <p className="text-center text-[var(--foreground)]">
-          Already have an account? <a href="/" className="text-[var(--highlight)] hover:underline">Login</a>
+          Already have an account? <Link href="/" className="text-[var(--highlight)] hover:underline">Login</Link>
         </p>
       </div>
     </div>
