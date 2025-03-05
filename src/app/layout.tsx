@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "tailwindcss/tailwind.css";
 import Header from "../components/Header/Header";
 import RefreshToken from "../middleware/refreshToken";
 

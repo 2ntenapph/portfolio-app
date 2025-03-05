@@ -5,21 +5,16 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY package.json package-lock.json ./
+COPY package.json /
 
 # Install dependencies
-RUN npm install --production
+RUN npm install
 
 # Copy the entire project
 COPY . .
 
 # Build Next.js app (Standalone Mode)
 RUN npm run build
-
-# Stage 2: Production-ready container
-FROM node:18-alpine
-
-WORKDIR /app
 
 # Expose port (Railway assigns a random port, so use ENV variable)
 EXPOSE 3000
