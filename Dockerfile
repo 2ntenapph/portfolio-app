@@ -21,15 +21,6 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy standalone output (this includes the Next.js server)
-COPY --from=builder /app/.next/standalone ./
-
-# Copy Next.js static files (JS, CSS, Fonts)
-COPY --from=builder /app/.next/static ./.next/static
-
-# Copy public folder (for images and other public assets)
-COPY --from=builder /app/public ./public
-
 # Expose port (Railway assigns a random port, so use ENV variable)
 EXPOSE 3000
 
