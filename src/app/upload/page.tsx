@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function UploadPage() {
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://back-production-ea87.up.railway.app";
   const router = useRouter();
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
