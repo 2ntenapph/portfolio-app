@@ -14,6 +14,7 @@ export default function Dashboard() {
     email: string;
     occupation: string;
     role: string;
+    slug: string;
   }
 
   const [users, setUsers] = useState<User[]>([]);
@@ -21,7 +22,7 @@ export default function Dashboard() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    async function fetchUsers() {
+    const fetchUsers = async () => {
       try {
         const response = await fetch(`${API_URL}/api/profiles`, {
           method: "GET",
@@ -63,20 +64,23 @@ export default function Dashboard() {
               key={user._id}
               className="p-4 border-b border-gray-200 hover:bg-gray-100 transition-all"
             >
-              <Link
-                href={`/user/${user._id}`}
-                className="text-blue-600 hover:underline"
-              >
-                <span className="font-semibold">{user.fullName}</span> -{" "}
-                {user.occupation} (
+              <div>
                 <Link
                   href={`/user/${user._id}`}
                   className="text-blue-600 hover:underline"
                 >
+                  <span className="font-semibold">{user.fullName}</span> -{" "}
+                  {user.occupation}
+                </Link>
+                {" ("}
+                <Link
+                  href={`/${user.slug}`}
+                  className="text-blue-600 hover:underline"
+                >
                   Webpage
                 </Link>
-                )
-              </Link>
+                {")"}
+              </div>
             </li>
           ))}
         </ul>

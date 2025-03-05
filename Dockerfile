@@ -1,18 +1,23 @@
 # Use Node.js official image
-FROM node:18-alpine
+FROM node:18
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
+# Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
-RUN npm install
+
+# Install dependencies correctly
+RUN npm ci --production
 
 # Copy the rest of the app
 COPY . .
 
-# Expose port 3000
+# Build the Next.js app
+RUN npm run build
+
+# Expose the correct port
 EXPOSE 3000
 
-# Start Next.js server
-CMD ["npm", "run", "dev"]
+# Start the Next.js server in production mode
+CMD ["npm", "run", "start"]
