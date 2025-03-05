@@ -6,7 +6,7 @@ import ProfileClient from "../../components/ProfileClient";
 
 export default function ProfilePage() {
   const { slug } = useParams();
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://back-production-ea87.up.railway.app";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://back-production-ea87.up.railway.app";
 
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
