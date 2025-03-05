@@ -1,22 +1,36 @@
-# Stage 1: Build Next.js app
+# Stage 1: Build the Next.js app
 FROM node:18-alpine AS builder
 
-# Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package.json /
+# Copy package files first
+COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --production
 
-# Copy the entire project
+# Copy the rest of the application
 COPY . .
 
-# Build Next.js app (Standalone Mode)
+# Build Next.js with standalone output
 RUN npm run build
 
-# Expose port (Railway assigns a random port, so use ENV variable)
+# Stage 2: Create the final runtime image
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy the standalone server files
+COPY --from=builder /app/.next/standalone ./
+
+# Copy the static and public assets
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/static ./.next/static
+
+# Ensure all dependencies are copied correctly
+COPY --from=builder /app/node_modules ./node_modules
+
+# Expose the port for Railway
 EXPOSE 3000
 
 # Run the standalone server
