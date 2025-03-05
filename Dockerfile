@@ -1,5 +1,5 @@
-# Use Node.js official image
-FROM node:18-alpine
+# Stage 1: Build Next.js app
+FROM node:18-alpine AS builder
 
 # Set working directory
 WORKDIR /app
@@ -10,24 +10,28 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm install --production
 
-# Copy the rest of the app
+# Copy the entire app
 COPY . .
 
-# Build the Next.js app in standalone mode
+# Build Next.js app in standalone mode
 RUN npm run build
 
-# Switch to a minimal runtime image for production
+# Stage 2: Production-ready container
 FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy only the built output from the previous step
-COPY --from=0 /app/.next/standalone ./
-COPY --from=0 /app/public ./public
-COPY --from=0 /app/.next/static ./.next/static
+# Copy standalone output
+COPY --from=builder /app/.next/standalone ./
 
-# Expose the port (Railway will assign a random one)
+# Copy public assets (for static files like images, fonts, etc.)
+COPY --from=builder /app/public ./public
+
+# Copy Next.js static assets (for styles and JS)
+COPY --from=builder /app/.next/static ./.next/static
+
+# Expose port (Railway uses dynamic ports, so ensure your app listens to `process.env.PORT`)
 EXPOSE 3000
 
-# Run the standalone server
+# Start the app
 CMD ["node", "server.js"]
